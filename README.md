@@ -36,7 +36,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: (https://your-live-site-url.com)
+- Live Site URL: (https://faq-accordion-aish.netlify.app/)
 
 ## My process
 At first I completed  all the styling and responsive development. After then, i started working on javascript. I searched different accordion examples in codepen and finally i thought to implement bootstrap accordion on my own.
