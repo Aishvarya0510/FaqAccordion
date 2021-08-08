@@ -1,0 +1,16 @@
+$text-blue: hsl(238, 29%, 16%);
+$text-darkGrayishBlue: hsl(240, 6%, 50%);
+$text-extraDarkGrayishBlue: hsl(237, 12%, 33%);
+$text-red:  hsl(14, 88%, 65%);
+$gradientViolet:  hsl(273, 75%, 66%);
+$gradientBlue: hsl(240, 73%, 65%);
+$dividerBlue: hsl(240, 5%, 91%);
+$white: #ffffff;
+
+//breakpoints
+
+$extra-large-device-width: 1366px;
+$large-device-width: 1199px; // desktops < 1199px
+$medium-device-width: 991px; //tablets < 991px
+$small-device-width: 767px; // landscape phones < 767px
+$extra-small-device-width: 575px; // phone < 576px

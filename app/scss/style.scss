@@ -1,0 +1,209 @@
+@import './variables';
+@import './mixins';
+
+html {
+    box-sizing: border-box;
+}
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+body {
+    margin: 0;
+    padding: 3rem;
+    font-family: 'Kumbh Sans', sans-serif;
+    color:$text-blue;
+    min-height: 100vh;
+    background-image: linear-gradient($gradientViolet, $gradientBlue);
+    overflow: hidden;
+    @include mobile() {
+        overflow-y: auto;
+    }
+}
+h1, h2, h3 {
+    margin-top: 0;
+}
+#home {
+  .card {
+    max-width: 900px;
+    display: flex;
+    align-items: center;
+    border-radius: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    height: 509px;
+    margin-top: 2rem;
+    background-size: 116%;
+    background-position: right 542px top -334px;
+    background-image: url('../images/bg-pattern-desktop.svg');
+    background-repeat: no-repeat;
+    background-color: white;
+
+    @include mobile() {
+      flex-direction: column;
+      background-image: url('../images/bg-pattern-mobile.svg');
+      background-repeat: no-repeat;
+      background-position: center 0%;
+      background-size: 16rem;
+      margin-top: 3rem;
+      height: 587px;
+    }
+    &__box {
+      position: absolute;
+      z-index: 1;
+      bottom: 31px;
+      left: 0;
+      transform: translateX(-54%) translateY(-50%);
+      top: 64%;
+
+      @include tablet() {
+        left: 10px;
+        top: 63%;
+        height: 10rem;
+      }
+      @include mobile() {
+        left: 104px;
+        transform: translateX(-50%) translateY(-50%);
+        top: 3px;
+        height: 6rem;
+      }
+    }
+    &__text {
+      flex: 1;
+      padding-right: 5.8125rem;
+      color:  $text-darkGrayishBlue;
+
+      @include mobile() {
+        margin-top: 10rem;
+        padding-right: 3rem;
+        padding-right: 3rem;
+      }
+      h1 {
+        color: black;
+        @include mobile() {
+          text-align: center;
+          font-size: 2rem;
+          margin-left: 3rem;
+        }
+      }
+      .accordion {
+        &__item {
+          padding-top: 1rem;
+          border-bottom:1px solid $dividerBlue;
+          h2 {
+            margin-bottom: 0;
+          }
+
+        }
+
+        &__collapse {
+          transition: height .33s ease;
+
+          &.collapse {
+            display: none;
+          }
+          &.collapsing {
+            height: 0;
+            overflow: hidden;
+          }
+          &.open {
+            display: block;
+          }
+
+        }
+
+
+        &__question {
+          border: none;
+          background: transparent;
+          padding: 0.2rem;
+          font-size: 0.875rem;
+          font-family: 'Kumbh Sans', sans-serif;
+          margin-bottom: 1rem;
+          width: 100%;
+          text-align: left;
+          display: flex;
+          justify-content: space-between;
+          cursor: pointer;
+          color: $text-darkGrayishBlue;
+          @include mobile() {
+            padding-left: 2rem;
+          }
+
+          &:focus-visible {
+            border: none;
+            outline: dashed 1px $text-darkGrayishBlue;
+          }
+          &:focus {
+            outline: dashed 1px rgba($text-darkGrayishBlue,0.5);
+          }
+
+          &:hover {
+            color: $text-red;
+          }
+          &::after {
+            content: '';
+            background-image: url('../images/icon-arrow-down.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            width: 1rem;
+            height: 1rem;
+            color: $text-red;
+            left: 2rem;
+            position: relative;
+          }
+        }
+
+        .accordion__question.open{
+          font-weight: 700;
+          color: black;
+
+          &::after {
+            transform: rotate(180deg);
+          }
+        }
+
+        &__content {
+          font-size: 0.75rem;
+          line-height: 1.4;
+          padding-bottom: 1rem;
+          @include mobile() {
+            padding-bottom: 1rem;
+            padding-left: 2rem;
+          }
+        }
+      }
+    }
+    &__image{
+      flex: 1;
+      overflow: hidden;
+      position: relative;
+      padding-right: 2rem;
+      width: 50%;
+      top: 30px;
+
+      @include mobile() {
+        width: 100%;
+        position: absolute;
+        padding-right: 0;
+        top: -7rem;
+        left: 5rem;
+      }
+      img {
+        transform: translateX(-5rem);
+        max-width: 31rem;
+        @include tablet() {
+          transform: translateX(-2.5rem);
+        }
+        @include mobile() {
+          width: 100%;
+          height: auto;
+          max-width: 15rem;
+          margin: auto;
+          transform: none;
+        }
+      }
+    }
+  }
+}
