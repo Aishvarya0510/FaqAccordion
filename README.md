@@ -29,8 +29,9 @@ Users should be able to:
 
 ### Screenshot
 
-![../desktop.png]
-![../mobile-responsive.png]
+![desktop.png](https://github.com/Aishvarya0510/FaqAccordion/blob/master/desktop.png)
+
+![mobile-responsive.png](https://github.com/Aishvarya0510/FaqAccordion/blob/master/mobile-responsive.png)
 
 ### Links
 
