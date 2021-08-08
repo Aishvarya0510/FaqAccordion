@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Screenshot
 
-![../desktop.png]
-![../mobile-responsive.png]
+![./desktop.png]
+![./mobile-responsive.png]
 
 ### Links
 
