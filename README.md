@@ -33,6 +33,7 @@ Users should be able to:
 
 ![mobile-responsive.png](https://github.com/Aishvarya0510/FaqAccordion/blob/master/mobile-responsive.png)
 
+
 ### Links
 
 - Live Site URL: (https://your-live-site-url.com)
